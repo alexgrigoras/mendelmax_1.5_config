@@ -1,0 +1,9 @@
+G28
+M201 Z100       			; Set accelerations (mm/s^2)
+M913 Z100					; Set motor current (%)
+G1 Z195 F2000
+M913 Z10
+G1 Z205 F100
+M913 Z100
+G1 S1 Z-205 F600 S1    		; move Z down stopping at the endstop
+G1 Z20 F1800	         	; lift the nozzle after homing

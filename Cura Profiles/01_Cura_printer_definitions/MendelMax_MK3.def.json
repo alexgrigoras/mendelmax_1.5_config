@@ -47,7 +47,7 @@
             "default_value": "G21 ; set units to millimeters\nG90 ; use absolute positioning\nM83 ; relative extrusion mode\nM104 S{material_print_temperature_layer_0} ; set extruder temp\nM140 S{material_bed_temperature_layer_0} ; set bed temp\nM190 S{material_bed_temperature_layer_0} ; wait for bed temp\nM109 S{material_print_temperature_layer_0} ; wait for extruder temp\nG32 ; mesh bed leveling\nG92 E0.0 ; reset extruder distance position\nG1 X10 Y0 Z0.3 F4000.0 ; go outside print area\nG1 X70.0 E9.0 F1000.0 ; intro line\nG1 X110.0 E15.5 F1000.0 ; intro line\nG92 E0.0 ; reset extruder distance position"
         },
         "machine_end_gcode": {
-            "default_value": "M104 S0 ; turn off extruder\nM140 S0 ; turn off heatbed\nM106 S0 ; turn off fan\nG1 Z0.5 F1800 ; lift Z by 0.5mm\nG1 X38 Y200; home X axis and push Y forward\nM84 ; disable motors"
+            "default_value": "M104 S0 ; turn off extruder\nM140 S0 ; turn off heatbed\nM106 S0 ; turn off fan\nG1 X38 Y200; home X axis and push Y forward\nM84 ; disable motors"
         }
     }
 }

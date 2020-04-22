@@ -1,0 +1,53 @@
+{
+    "version": 2,
+    "name": "MendelMax MK3",
+    "inherits": "fdmprinter",
+    "metadata": {
+        "visible": true,
+        "author": "Alexandru Grigoras",
+        "manufacturer": "Alexandru Grigoras",
+        "file_formats": "text/x-gcode",
+        "icon": "icon_ultimaker2",
+        "platform": "MendelMax_MK3_platform.stl",
+        "has_materials": true,
+		 "machine_extruder_trains":
+        {
+            "0": "MendelMax_MK3_extruder_0"
+        }
+    },
+
+    "overrides": {
+		"machine_name": { "default_value": "MendelMax MK3" },
+        "machine_heated_bed": { "default_value": true },
+        "machine_width": { "default_value": 212 },
+        "machine_height": { "default_value": 200 },
+        "machine_depth": { "default_value": 212 },
+        "machine_center_is_zero": { "default_value": false },
+        "material_diameter": { "default_value": 1.75 },
+        "material_bed_temperature": { "default_value": 60 },
+        "machine_nozzle_size": { "default_value": 0.4 },
+        "layer_height": { "default_value": 0.15 },
+        "layer_height_0": { "default_value": 0.2 },
+        "retraction_amount": { "default_value": 0.8 },
+        "retraction_speed": { "default_value": 35 },
+        "retraction_retract_speed": { "default_value": 35 },
+        "retraction_prime_speed": { "default_value": 35 },
+        "adhesion_type": { "default_value": "skirt" },
+        "machine_head_with_fans_polygon": { "default_value": [[0,200],[0,0],[212,200],[212,0]] },
+        "gantry_height": { "default_value": 28 },
+        "machine_max_feedrate_z": { "default_value": 30 },
+        "machine_max_feedrate_e": { "default_value": 120 },
+        "machine_max_acceleration_z": { "default_value": 500 },
+        "machine_acceleration": { "default_value": 2000 },
+        "machine_max_jerk_xy": { "default_value": 10 },
+        "machine_max_jerk_z": { "default_value": 0.2 },
+        "machine_max_jerk_e": { "default_value": 2.5 },
+        "machine_gcode_flavor": { "default_value": "RepRap (RepRap)" },
+        "machine_start_gcode": {
+            "default_value": "G21 ; set units to millimeters\nG90 ; use absolute positioning\nM83 ; relative extrusion mode\nM104 S{material_print_temperature_layer_0} ; set extruder temp\nM140 S{material_bed_temperature_layer_0} ; set bed temp\nM190 S{material_bed_temperature_layer_0} ; wait for bed temp\nM109 S{material_print_temperature_layer_0} ; wait for extruder temp\nG32 ; mesh bed leveling\nG92 E0.0 ; reset extruder distance position\nG1 X10 Y0 Z0.3 F4000.0 ; go outside print area\nG1 X70.0 E9.0 F1000.0 ; intro line\nG1 X110.0 E15.5 F1000.0 ; intro line\nG92 E0.0 ; reset extruder distance position"
+        },
+        "machine_end_gcode": {
+            "default_value": "M104 S0 ; turn off extruder\nM140 S0 ; turn off heatbed\nM106 S0 ; turn off fan\nG1 Z0.5 F1800 ; lift Z by 0.5mm\nG1 X38 Y200; home X axis and push Y forward\nM84 ; disable motors"
+        }
+    }
+}

@@ -1,3 +1,6 @@
+; resurrect-prologue.g
+; called when recovering power failure
+
 M116 			; wait for temperatures
 G28 X Y 		; home X and Y, hope that Z hasn't moved
 M83 			; relative extrusion

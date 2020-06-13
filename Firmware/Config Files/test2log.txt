@@ -1,0 +1,8 @@
+2018-06-22 00:58:30 Event logging started
+2018-06-22 01:02:14 HTTP client 192.168.43.75 disconnected
+2018-06-22 01:02:16 HTTP client 192.168.43.75 login succeeded
+2018-06-22 01:04:03 Warning: VIN under-voltage event (7.0V)
+2018-06-23 16:05:13 Event logging started
+2018-06-23 16:05:59 Event logging stopped
+2018-07-05 10:56:25 Event logging started
+2018-07-05 10:56:59 Event logging stopped

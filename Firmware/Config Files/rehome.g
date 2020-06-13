@@ -1,5 +1,6 @@
 ; homeall.g
 ; called to home the X, Y in case of crash detection
+
 G91               			; relative positioning
 M201 X400 Y400		     	; Set accelerations (mm/s^2)
 G1 Z5						; move z

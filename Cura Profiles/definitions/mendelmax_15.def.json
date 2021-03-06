@@ -15,7 +15,7 @@
 		"has_variant_buildplates": false,
 		"preferred_quality_type": "fast",
 		"variants_name": "Extruder",
-		"supports_usb_connection": false,
+		"supports_usb_connection": true,
 		"machine_extruder_trains":
         {
             "0": "mendelmax_15_extruder"
